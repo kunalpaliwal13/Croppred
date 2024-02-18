@@ -1,0 +1,60 @@
+:root {
+    --main: #239d60; /* Define a variable with name --main-color and value #3498db */
+    --hover: #3fc984;
+    --bg: #0b020c;
+  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+.container p{
+    
+    margin: 0 20px;
+    display: flex;
+    flex-direction: c;
+    justify-content: center;
+    text-align: left;
+    padding: 20px 50px;
+    color: white;
+    font-size: 17px;
+}
+h1{
+    color: #79d679;
+    margin-bottom: 0;
+}
+#btn{
+    text-decoration: none;
+    background-color: var(--main);
+    height: 50px;
+    width: 160px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+#btn:hover{
+    background:var(--hover);
+}
+#plot-containe{
+    margin: 100px 100px;
+    width: 20vh;
+    height: 20vh;
+    position: absolute;
+    color: white;
+}

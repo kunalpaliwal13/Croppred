@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A step towards sustainance</title>
+    <link rel="stylesheet" href="/static/styles-organic.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+    <img src="/static/bgimg.jpg" id="bgimg" />
+
+
+    <!-- Navbar -->
+    <div id="navbar">
+      <h1>CropPred</h1>
+      <div class="headers">
+        <a href="/">Home</a>
+        <a onclick="showPopup()">Average Weather</a>
+        <a href="/predict">Crop Predict</a>
+        <a href="/predict_another">Fertilizer Predict</a>
+        <a href="https://github.com/kunalpaliwal13/EPICS-AgricultureApp"
+          >Get the Code</a
+        >
+        <a href="/contact_us">Contact us</a>
+      </div>
+    </div>
+
+    <!-- Animated heading -->
+    <div class="containerx">
+      <h1 class="title-head" onmouseenter="scrollToElement('#card')">
+        Let's take a step towards sustainable farming.
+      </h1>
+    </div>
+
+
+    <!--  Card full page  -->
+    <div id="card">
+      <div id="card-content">
+        <div class="text">
+          <h1>Why an alternative approach?</h1>
+          <p>
+            In our commitment to sustainable agriculture and environmental
+            stewardship, we recognize the importance of reducing reliance on
+            synthetic fertilizers. While conventional fertilizers like DAP and
+            Urea have been widely used for their effectiveness in enhancing crop
+            growth, organic alternatives offer a more environmentally friendly
+            approach to nourishing your crops.<br /><br />
+            In addition to their eco-friendly nature, organic fertilizers enrich
+            the soil with essential nutrients, promote soil health, and foster
+            microbial activity, resulting in improved long-term sustainability
+            for agricultural ecosystems. By embracing organic alternatives,
+            farmers contribute to the preservation of biodiversity and reduce
+            the risk of harmful runoff into water sources, ensuring a healthier
+            environment for future generations.
+          </p>
+          
+        </div>
+        <!-- <button class="btn" onclick="scrollToElement('.container')">go back</button> -->
+        <img src="/static/card-img.jpg" height="100%" width="45%" />
+      </div>
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16" onclick="scrollToElement('#carousel')">
+          <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </div>
+    </div>
+
+
+  <div class="containerx">
+    <div id="carousel">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-caret-left-fill" viewBox="0 0 16 16" onclick="moveLeft()">
+        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+      </svg>
+      <div class="carousel-card active">
+        <div class="card-content">
+          <h1>Urea (46-0-0)</h1>
+          <b>Alternative: Compost Tea</b>
+          <p> 
+            <ul>
+
+            <li>Compost tea is a natural fertilizer made from composted organic matter. It provides a balanced nutrient profile and enhances soil health by promoting microbial activity.</li>
+            <br>
+            <li>One of the key advantages of compost tea is its ability to boost soil microbial activity. Beneficial bacteria, fungi, protozoa, and other microorganisms present in the compost are transferred into the tea during the brewing process. When applied to the soil, these microorganisms help break down organic matter, improve soil structure, and suppress harmful pathogens, contributing to a healthier and more fertile growing environment.</li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/compost tea.jpg">
+      </div>
+      
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>DAP (18-46-0)</h1>
+          <b>Alternative: Fish Emulsion</b>
+          <p> 
+            <ul>
+
+            <li>Fish emulsion is derived from fish waste and provides a rich source of nitrogen, phosphorus, and potassium. It's a sustainable option that improves soil fertility and promotes plant growth.</li>
+            <br>
+            <li>One of the key benefits of fish emulsion is the organic form of nutrients it provides, which are readily available for plant uptake. Unlike synthetic fertilizers that may require microbial activity or chemical reactions to release nutrients, fish emulsion delivers nutrients directly to the plants in a form they can immediately utilize, resulting in rapid growth and improved health.</li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/fish-compost.jpg">
+      </div>
+
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>28-28 (28-0-0)</h1>
+          <b>Alternative: Alfalfa Meal</b>
+          <p> 
+            <ul>
+
+            <li>Alfalfa meal is a slow-release organic fertilizer high in nitrogen. It improves soil structure, boosts microbial activity, and enhances nutrient uptake by plants.</li>
+            <br>
+            <li>Additionally, alfalfa meal acts as a soil conditioner, enhancing soil structure and water retention capabilities. Its presence in the soil fosters a thriving microbial community, which further aids in nutrient breakdown and availability for plants. </li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/alfalfa.jpg">
+      </div>
+
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>14-35-14 (14-0-14)</h1>
+          <b>Alternative: Bone Meal</b>
+          <p> 
+            <ul>
+
+            <li>Bone meal is a natural source of phosphorus and calcium, essential for root development and flowering. It's derived from ground animal bones and promotes healthy plant growth.</li>
+            <br>
+            <li> As a natural source of phosphorus and calcium, it plays a pivotal role in supporting various aspects of plant development. Phosphorus, a key nutrient found abundantly in bone meal, is essential for energy transfer within plants, contributing significantly to root establishment, flowering, and overall plant vigor. </li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/bone-meal.jpg">
+      </div>
+
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>20-20 (20-0-20)</h1>
+          <b>Alternative: Kelp Meal</b>
+          <p> 
+            <ul>
+
+            <li>Kelp meal is a seaweed-based fertilizer rich in micronutrients, potassium, and trace minerals. It enhances soil fertility, stimulates plant growth, and improves resistance to stress.</li>
+            <br>
+            <li>The abundance of micronutrients and trace minerals in kelp meal enriches the soil, ensuring that plants have access to a diverse array of essential elements necessary for optimal health and vitality. Potassium, a key component of kelp meal, plays a crucial role in numerous physiological processes within plants, including enzyme activation, water regulation, and disease resistance.</li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/kelp-meal.jpg">
+      </div>
+
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>17-17-17 (17-0-17)</h1>
+          <b>Alternative: Blood Meal</b>
+          <p> 
+            <ul>
+
+            <li>Blood meal is a nitrogen-rich organic fertilizer made from dried animal blood. It's fast-acting and promotes lush foliage growth, making it ideal for leafy vegetables and ornamental plants.</li>
+            <br>
+            <li>Being a fast-acting fertilizer, blood meal provides an immediate nutrient boost to plants, stimulating lush foliage development within a short span of time. This characteristic makes it particularly well-suited for leafy vegetables and ornamental plants, where rapid vegetative growth is desired to achieve lush greenery and vibrant foliage displays.</li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/blood-meal.jpg">
+      </div>
+
+      <div class="carousel-card">
+        <div class="card-content">
+          <h1>10-26-26 (10-26-26)</h1>
+          <b>Alternative: Rock Phosphate</b>
+          <p> 
+            <ul>
+
+            <li>Rock phosphate is a natural mineral fertilizer containing phosphorus and trace minerals. It's a slow-release option that improves soil fertility and supports long-term plant growth.</li>
+            <br>
+            <li>The phosphorus present in rock phosphate is essential for various critical functions within plants, including energy transfer, root development, and fruit and flower production. By supplying phosphorus, rock phosphate promotes healthy root systems and overall plant vigor, contributing to improved crop yields and quality.</li>
+          </ul>
+        </p>
+          </div>
+        <img src = "/static/imgs/rock-phosphate.jpg">
+      </div>
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  class="bi bi-caret-right-fill" viewBox="0 0 16 16" onclick="moveRight()">
+        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+      </svg>
+
+    </div>
+  </div>
+
+    
+
+
+
+  <div class="gtranslate_wrapper"></div>
+  </body>
+  <script>
+    window.gtranslateSettings = {
+      default_language: "en",
+      languages: ["en", "hi"],
+      wrapper_selector: ".gtranslate_wrapper",
+    };
+  </script>
+  <script
+    src="https://cdn.gtranslate.net/widgets/latest/float.js"
+    defer
+  ></script>
+  <script>
+    function scrollToElement(id) {
+      var element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+
+    function moveRight(){
+      cards = document.querySelectorAll('.carousel-card');
+      console.log(cards);
+      for(let i =0; i< cards.length; i++){
+        if(cards[i].classList.contains('active')){
+          cards[i].classList.remove('active');
+          if(i == cards.length-1){
+            cards[0].classList.add('active');
+          }
+          else{
+            cards[i+1].classList.add('active');
+
+            console.log(cards[i+1]);
+          }
+          break;
+        }
+      }
+    }
+    function moveLeft(){
+      cards = document.querySelectorAll('.carousel-card');
+      console.log(cards);
+      for(let i =0; i< cards.length; i++){
+        if(cards[i].classList.contains('active')){
+          cards[i].classList.remove('active');
+          if(i == 0){
+            cards[cards.length-1].classList.add('active');
+          }
+          else{
+            cards[i-1].classList.add('active');
+          }
+          break;
+
+        }
+      }
+
+    }
+
+
+    function handleScroll(event) {
+    if (event.deltaX > 75) {
+      moveRight();
+      event.deltaX=0;
+    } else if (event.deltaX < -75) {
+      moveLeft();
+      event.deltaX=0;
+    }
+  }
+  carousel = document.getElementById('carousel');
+  carousel.addEventListener('wheel', handleScroll)
+  </script>
+ 
+  
+</html>

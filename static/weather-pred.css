@@ -1,0 +1,64 @@
+#popup-container{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.69);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    margin-bottom: 40%;
+    position: absolute;
+    width: 350px;
+} 
+#x{
+    font-size: 10px;
+    margin-right: 15px;
+}
+#x:hover{
+    color: rgb(92, 89, 89);
+}
+.weather-pred-card{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    >.content-weather{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        >.weather-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            >.input-city{
+                width: 90%;
+                border-radius: 5px;
+                border: none;
+                font-size: 15px;
+                height: 25px;
+                padding: 5px;
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
+            >.btn{
+                background-color: #6ef57780;
+                width: 30%;
+                height: 30px;
+                border: none;
+                color: white;
+                border-radius: 2px;
+            }
+            >.btn:hover{
+                background-color: #a3faa880;
+            }
+
+        }
+        >.weather-pred{
+            color: rgb(71, 219, 71);
+            margin-bottom: 10px;
+        }
+    }
+}
+
