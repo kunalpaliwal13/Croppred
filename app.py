@@ -93,7 +93,7 @@ def predict():
 
         result = f"{predicted_crop} is the predicted crop"
     except Exception as e:
-        result = ""
+        result = e
 
     return render_template("croppredict.html", result=result)
 
