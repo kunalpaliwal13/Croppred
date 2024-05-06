@@ -10,15 +10,18 @@
     font-family: 'Poppins', sans-serif;   
 }
 body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
     margin: 0;
-    padding: 0;
 }
 #bgimg{
-    z-index: -2;
     position: fixed;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
 }
 .navbar{
     width: 98vw;
@@ -132,6 +135,7 @@ body{
     text-align: center;
 }
 .bgbox{
+    backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.721);
     padding: 10px 30px;
     display: flex;
@@ -185,3 +189,5 @@ body{
 .goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
     display: none;
 }
+
+

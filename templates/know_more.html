@@ -4,22 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Know more</title>
-    <style> body{display: flex; justify-content: center; align-items: center; flex-direction: column;}#plot-container{display: flex; flex-direction: column; justify-content: center; width: 80vh;}</style>
     <link rel = "stylesheet" href = "static/styles2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
-    <h1>How Our Model Works</h1>
-    <div class="container">
-    
-        <img src='https://i.postimg.cc/0jPB0rZ5/system-design.png' height='250px' width=" 700px" alt='system-design'/>
-    
+    <img src="/static/bgimg.jpg" id="bgimg" />
 
+    <div class="navbar">
+        <h1>CropPred</h1>
+        <div class="headers">
+          <a href="/">Home</a>
+          <a href="/predict">Crop Predict</a>
+          <a href="/predict_another">Fertilizer Predict</a>
+          <a href="https://github.com/kunalpaliwal13/EPICS-AgricultureApp"
+            >Get the Code</a>
+        </div>
+      </div>
         
-            <p>Our crop recommendation system harnesses the capabilities of XGBoost, a robust and sophisticated machine learning algorithm. By leveraging this powerful tool, we can delve into the intricate relationships between crucial environmental factors and crop outcomes. The algorithm meticulously analyzes variables such as Nitrogen, Phosphorus, Potassium, temperature, humidity, pH, and rainfall, extracting patterns and insights from vast datasets. This data-driven model serves as the backbone of our crop prediction system, drawing from a comprehensive database to deliver precise recommendations tailored to specific farming conditions.<br>
-    To facilitate a deeper understanding of the decision-making process within our system, we employ visual aids such as heatmaps. These graphical representations illuminate the intricate interplay of variables, highlighting the significant features that wield the most influence over our crop recommendations. This straightforward yet effective approach aims to empower farmers with actionable insights, enabling them to make informed decisions for optimized agricultural outcomes. By visually unveiling the influential factors, our system becomes a valuable resource, assisting farmers in navigating the complexities of crop selection and fostering a more sustainable and productive agricultural landscape.</p>
-    
-    </div>
-    <a id = "btn" href="/">Go back</a>
+
+
+      <div class="container">
+        <h1 class="title-head" onmouseenter="scrollToElement('#card')">
+            Ler's get a brief on how our website works
+        </h1>
+      </div>
+
+      <div id="card">
+        <div id="card-content">
+          <div class="text">
+            <h1>What is our website all about?</h1>
+            <p>
+                Welcome to our sustainable agriculture platform, where we harness the power of machine learning to revolutionize farming practices. 
+                Our cutting-edge models analyze environmental factors such as temperature, humidity, soil pH, and rainfall to provide personalized crop recommendations tailored to your specific region.
+                By leveraging predictive analytics, we empower farmers to make informed decisions about what crops to grow, optimizing yields while minimizing environmental 
+                impact. <br>Additionally, our fertilizer recommendation system utilizes machine learning algorithms to suggest the most suitable fertilizers based on soil nutrient levels, 
+                promoting efficient resource utilization and sustainable farming practices. Join us in cultivating a greener, more sustainable future for agriculture.
+            </p>
+            
+          </div>
+          <img src="/static/imgs/img-knowmore.jpg" height="100%" width="45%" />
+        </div>
+      </div><div class="gtranslate_wrapper"></div>
 </body>
+<script>
+    function scrollToElement(id) {
+      var element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+</script>
+<script src="/static/script.js"></script>
+<script>window.gtranslateSettings = {"default_language":"en","languages":["en","hi"],"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </html>

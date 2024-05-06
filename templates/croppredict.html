@@ -11,17 +11,17 @@
 
 <body>
     <img src = "/static/bgimg.jpg" id="bgimg">
+    
     <div class="navbar">
         <h1>CropPred</h1>
         <div class="headers">
             <a href="/">Home</a>
-            <a onclick="showPopup()" >Average Weather</a> 
             <a href="/predict">Crop Predict</a>
             <a href="/predict_another">Fertilizer Predict</a>
             <a href="https://github.com/kunalpaliwal13/EPICS-AgricultureApp">Get the Code</a>
-            <a href="/contact_us">Contact us</a>
         </div>
     </div>
+        <!-- added home -->
         <div id="predictor">
             <div class="bgbox">
             <h1 class="title">Crop Recommendor🌱</h1>
@@ -41,10 +41,6 @@
 
                 <div class="labelbox">
                     <input class="inputform" type="number" name="humidity" required placeholder="Humidity %"><br>
-                    <input class="inputform" type="number" name="ph" required placeholder="Soil ph"><br>
-                </div>
-                <div class="labelbox">
-                    <input class="inputform" type="number" name="rainfall" required placeholder="Rainfall (mm)"><br>
                 </div>
 
 
@@ -54,24 +50,6 @@
 
                 </div>
             <div id="result">{{ result }} </div>
-            </div>
-        </div>
-        <div id="popup-container">
-            <div class="weather-pred-card">
-                <span id ="x" onclick="closePopup('popup-container')">X</span>
-                <div class="content-weather">
-                    <div class="weather-header">
-                        <input type = "text" class="input-city" id="search" placeholder="City Name">
-                        <button type="submit" class = "btn" onclick="findCity()" id="citybtn">Submit</button>
-                    </div>
-                    <br>
-                    Temprature: <span id = 'temp' class="weather-pred"> Temprature of your city</span>
-                    Humidity: <span id = 'humidity' class="weather-pred">Humidity of your city</span>
-                    Wind Speed: <span id = 'wind' class="weather-pred">Wind speed in your city</span>
-                    Sunset and Sunrise Time: <span id = 'sun' class="weather-pred">Sunset and rise time in your city</span>
-                    <br>
-                    
-                </div>
             </div>
         </div>
     </form>

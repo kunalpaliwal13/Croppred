@@ -1,60 +1,105 @@
-:root {
-    --main: #239d60; /* Define a variable with name --main-color and value #3498db */
-    --hover: #3fc984;
-    --bg: #0b020c;
+*{  transition: all 0.3s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0; 
+}
+#bgimg {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+.navbar{
+    width: 100vw;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+    color:#ffffff;
+    font-weight: 500;
+    position: fixed;
+    z-index: 1000;
+    padding-right: 50px;
+    font-size: 16px;
+    height: 80px;
+}
+.navbar h1{
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px green;
+}
+.navbar .headers a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s;
+    text-shadow: 1px 1px green;
+    padding-right: 10px;
+}
+.navbar .headers a:hover {
+    color: rgb(160, 240, 167);
+}
 .container{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.234); 
 }
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
+.title-head{
+    transition: all 0.5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px green;
 }
-.container p{
-    
-    margin: 0 20px;
+.title-head:hover{
+    transform: translateY(-10px);
+    text-shadow:2px 2px black ;
+}
+#card{
+    padding-top: 6%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: c;
     justify-content: center;
-    text-align: left;
-    padding: 20px 50px;
-    color: white;
-    font-size: 17px;
-}
-h1{
-    color: #79d679;
-    margin-bottom: 0;
-}
-#btn{
-    text-decoration: none;
-    background-color: var(--main);
-    height: 50px;
-    width: 160px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.234); 
+    flex-direction: column;
 }
-#btn:hover{
-    background:var(--hover);
-}
-#plot-containe{
-    margin: 100px 100px;
-    width: 20vh;
-    height: 20vh;
-    position: absolute;
+#card-content{
     color: white;
+    height:75%;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
 }
+#card-content .text{
+    padding: 30px;
+    >p{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+}
+

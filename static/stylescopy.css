@@ -30,7 +30,7 @@ body {
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 50px;
     align-items: center;
     color:#ffffff;
     font-weight: 500;
@@ -38,7 +38,7 @@ body {
     z-index: 1000;
     padding-right: 50px;
     font-size: 16px;
-    background-color: transparent;
+    height: 50px;
 }
 .navbar h1{
     font-weight: 700;
@@ -46,6 +46,7 @@ body {
     text-shadow: 2px 2px green;
 }
 .navbar .headers a{
+    padding-right: 10px;
     text-decoration: none;
     margin: 0 10px;
     color: #ffffff;
@@ -56,7 +57,6 @@ body {
 }
 .navbar .headers a:hover {
     color: rgb(160, 240, 167);
-    
 }
 
 
@@ -69,7 +69,7 @@ body {
     z-index: 1000;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.386); 
+    background-color: rgba(0, 0, 0, 0.234); 
 }
 .container a{
     text-decoration: none;
@@ -92,7 +92,7 @@ body {
 }
 
 #home{
-    margin-top: 10%;
+    margin-top: 8%;
     padding-top: 80px;
     height: 100vh;
     display: flex;
