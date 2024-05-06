@@ -5,7 +5,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 from sklearn.preprocessing import StandardScaler
-import traceback 
 # import pymongo
 # from googletrans import Translator
 
@@ -62,7 +61,6 @@ def predict_another():
 
         result = prediction[2:-2] + " is the predicted fertilizer"
     except Exception as e:
-        traceback.print_exc()
         result = ""
     return render_template('fertilizerpred.html', another_result=result)
 
