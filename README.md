@@ -39,3 +39,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
+
+### Screenshots
+
+![image](https://github.com/user-attachments/assets/edf2a49d-47dc-47a6-8641-3d25c4874c7f)
+<br><br>
+![image](https://github.com/user-attachments/assets/3fa497bd-b54f-4408-8e69-daff3e7e2871)
+<br><br>
+![image](https://github.com/user-attachments/assets/15d05eca-e89a-4d03-b233-0aa3df1416ca)
+<br><br>
+![image](https://github.com/user-attachments/assets/e07b2307-2922-4801-b7e9-919dcd727b79)
+<br>
