@@ -9,10 +9,12 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;   
 }
+.hidden{
+    display: none;
+}
 body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
 }
 #bgimg{
@@ -23,6 +25,11 @@ body{
     bottom: 0;
     z-index: -1000;
 }
+
+.nav-burger{
+    display: none;
+}
+
 .navbar{
     width: 98vw;
     padding: 20px 10px;
@@ -36,6 +43,7 @@ body{
     padding-right: 50px;
     font-size: 16px;
     background-color: transparent;
+    height: 50px;
 }
 
 .navbar .headers a{
@@ -59,6 +67,12 @@ body{
     height: 100vh;
     padding-bottom: 0;
 }
+
+
+.predictor2{
+    display: none;
+}
+
 #predictor h1{
     margin: 50px 0;
     color: #ffffff;
@@ -75,7 +89,7 @@ body{
 }
 .inputform{
     height: 40px;
-    width: 40%;
+    width: 80%;
     border-radius: 5px;
     border: none;
     font-size: 15px;
@@ -87,8 +101,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 37%; 
+    /* padding-right: 300px; */
     margin: 20px 0;
     text-decoration: none;
     gap: 20px;
@@ -123,13 +137,13 @@ body{
 .btn:hover{
     background-color: #205239df;
 }
-#result{
+.result{
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px black;
     border-radius: 5px;
     margin-top: 0;
-    width: 380px;
-    margin-left: 220px;
+    width: 80%;
+    margin-left: 8%;
     color: white;
     font-size: 20px;
     text-align: center;
@@ -143,6 +157,7 @@ body{
     align-items: center;
     flex-direction: column;
     border-radius: 10px ;
+    width: 35%;
 }
 #shop{
     width: 100%;
@@ -167,8 +182,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 220px;
-    padding-right: 300px;
+    padding-left: 20%;
     margin: 20px 0;
     text-decoration: none;
     gap: 20px;
@@ -190,4 +204,109 @@ body{
     display: none;
 }
 
+@media (max-width: 480px) {
 
+    .show{
+        display: none !important;
+    }
+    .hidden{
+        display: flex;
+    }
+    .btncontainer{
+        padding-left: 0;
+    }
+    #predictor{
+        width: 100vw;
+    }
+    #bgimg{
+        height:100%;
+        width: 100%;
+    }
+    .navbar{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0; 
+        padding: 0;
+        
+        >h1{
+            display: none;
+        }
+      }
+      .headers{
+        position: fixed;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10%;
+        gap:8%;
+        height: 100vh;
+        background-image: url("./header-bgimg.png");
+        background-size: cover;          
+        background-position: center;     
+        background-repeat: no-repeat;
+        width: 100%;
+      }
+
+      .predictor2{
+        display: flex;
+        padding-top: 20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 0;
+        
+      }
+      .inputform{
+        width: 85% !important;
+        }
+        .title{
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .bgbox{
+            width: 70vw;
+            margin-bottom: 30%;
+            margin-top: 30%;
+            margin-top: 0;
+        }
+        .form{
+            width: 70vw;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+        .headers{
+            position: fixed;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10%;
+            gap:8%;
+            height: 100vh;
+            background-image: url("./header-bgimg.png");
+            background-size: cover;          
+            background-position: center;     
+            background-repeat: no-repeat;
+            width: 100%;
+          }
+          .navbar .headers a{
+            font-size: 20px;
+            text-shadow: 2px 2px green;
+            
+          }
+
+        .nav-burger{
+            display: flex;
+            background-color: "red";
+            height: 80%;
+            padding-left: 10px;
+            padding-top: 8%;
+            padding-right: 27.5%
+          }
+
+}

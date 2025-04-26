@@ -5,6 +5,10 @@
     padding: 0;   
  z-index: -1000;}
 
+#instruction{
+    margin-top: 10px;
+    display: none;
+}
 body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
@@ -12,6 +16,27 @@ body {
     margin: 0; 
     
 }
+#mobile-warning {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure it covers everything */
+}
+#main-content {
+    display: block;
+}
+
 
 #bgimg {
     position: fixed;
@@ -23,7 +48,9 @@ body {
 }
 
 
-
+.nav-burger{
+    display: none;
+}
  
 .navbar{
     width: 100vw;
@@ -138,4 +165,64 @@ body {
     z-index: 2;
 }
 
+@media (max-width: 480px) {
 
+    #instruction{
+        display: flex;
+    }
+    body {
+      font-size: 14px;
+  }
+  .navbar{
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    >h1{
+        display: none;
+    }
+  }
+  .nav-burger{
+    display: flex;
+    background-color: "red";
+    height: 80%;
+    padding-left: 10px;
+    padding-top: 8%;
+    padding-right: 27.5%
+  }
+  .headers{
+    position: fixed;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10%;
+    gap:8%;
+    height: 100vh;
+    background-image: url("./header-bgimg.png");
+    background-size: cover;          
+    background-position: center;     
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .navbar .headers a{
+    font-size: 20px;
+    text-shadow: 2px 2px green;
+    
+  }
+
+  #home h2{
+    font-size: 20px;
+  }
+  #home p{
+    font-size: 15px;
+  }
+  .container a{
+    font-size: 15px;
+    height: 35px;
+    width: 120px;
+  }
+  .gt_float_switcher .gt-selected .gt-current-lang{
+    padding: 4px 8px;
+  }
+}

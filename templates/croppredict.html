@@ -14,48 +14,68 @@
     
     <div class="navbar">
         <h1>Fieldly</h1>
+        <img src = "/static/imgs/burger.png" class="nav-burger" onclick="toggleburger()"/>
         <div class="headers">
             <a href="/">Home</a>
             <a href="/predict">Crop Predict</a>
             <a href="/predict_another">Fertilizer Predict</a>
             <a href="https://github.com/kunalpaliwal13/Fieldly/tree/main">Get the Code</a>
+            <a onclick="toggleburger()">X</a>
         </div>
     </div>
         <!-- added home -->
-        <div id="predictor">
+        <div id="predictor" class="show">
             <div class="bgbox">
             <h1 class="title">Crop Recommendor🌱</h1>
 
             <form action="/predict" method="post">
-
                 <div class="labelbox">
                     <input class="inputform" type=" number" name="N" required placeholder="Nitroge (ratio)"><br>
                     <input class="inputform" type= "number" name="P" required placeholder="Phosphorous (ratio)"><br>
                 </div>
-
-
                 <div class="labelbox">
                     <input class="inputform" type="number" name="K" required placeholder="Potassium (ratio)"><br>
                     <input class="inputform" type="number" name="temp" required placeholder="Temperature (°C)"><br>
                 </div>
-
                 <div class="labelbox">
                     <input class="inputform" type="number" name="humidity" required placeholder="Humidity %"><br>
                 </div>
+                <div class="btncontainer">
+                    <button class="btn" type="submit">Predict</button>
+
+                </div>
+            <div class="result">{{ result }} </div>
+        </form>
+            </div>
+        </div>
 
 
+        <div class="predictor2">
+            <div class="bgbox">
+            <h1 class="title">Crop Recommendor🌱</h1>
+
+            <form action="/predict2" method="post" class="form">
+
+                    <input class="inputform" type=" number" name="N" required placeholder="Nitroge (ratio)"><br>
+                    <input class="inputform" type= "number" name="P" required placeholder="Phosphorous (ratio)"><br>
+
+                    <input class="inputform" type="number" name="K" required placeholder="Potassium (ratio)"><br>
+                    <input class="inputform" type="number" name="temp" required placeholder="Temperature (°C)"><br>
+   
+                    <input class="inputform" type="number" name="humidity" required placeholder="Humidity %"><br>
 
                 <div class="btncontainer">
                     <button class="btn" type="submit">Predict</button>
 
                 </div>
-            <div id="result">{{ result }} </div>
+            <div class="result">{{ result2 }} </div>
+        </form>
             </div>
         </div>
-    </form>
+    
     <div class="gtranslate_wrapper"></div>
 </body>
-
+<script src="/static/script.js"></script>
 <script>window.gtranslateSettings = {"default_language":"en","languages":["en","hi"],"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 

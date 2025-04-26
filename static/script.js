@@ -1,8 +1,27 @@
 
+let burger = true
+function toggleburger(){
+    var headers = document.querySelector('.headers');
+    if(burger){
+        headers.style.display = 'flex';
+        burger= false;
+    }
+    else{
+        headers.style.display= 'none';
+        burger = true;
+    }
+}
+    
+    
+    
     function showPopup() {
+        if(!burger){toggleburger()}
         var popup = document.getElementById('popup-container');
         popup.style.display = 'flex';
+        
     }
+
+    
     
 
     function closePopup(e) {

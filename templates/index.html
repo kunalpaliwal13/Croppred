@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fieldly-Home</title>
-    <link rel = "stylesheet" href = "static/stylescopy.css">
-    <link rel = "stylesheet" href = "static/weather-pred.css">
+    <link rel="stylesheet" href="static/stylescopy.css">
+    <link rel="stylesheet" href="static/weather-pred.css">
 </head>
+
 <body>
-    <img src = "/static/bgimg.jpg" id="bgimg">
-<div class="navbar">
-    <h1>Fieldly</h1>
-    <div class="headers">
-        <a href="/">Home</a>
-        <a onclick="showPopup()" >Average Weather</a> 
-        <a href="/predict">Crop Predict</a>
-        <a href="/predict_another">Fertilizer Predict</a>
-        <a href="https://github.com/kunalpaliwal13/Fieldly/tree/main">Get the Code</a>
-    </div>
-</div>
 
 
-<div class="container">
-
-    <div id="home">   
-    <h1 class="homeh1">F I E L D L Y</h1>
-    <h2>AI Crop and Fertilizer Recommendor</h2>
-    <p class="intro-text">"Your personalised agriculture assistance"</p>
-    <a href="/know-more">Know more</a>
-
-    <div class="gtranslate_wrapper"></div>
-    
-
-
-
-    
-
-    <div id="popup-container">
-        <div class="weather-pred-card">
-            <span id ="x" onclick="closePopup('popup-container')">X</span>
-            <div class="content-weather">
-                <div class="weather-header">
-                    <input type = "text" class="input-city" id="search" placeholder="City Name">
-                    <button type="submit" class = "btn" onclick="findCity()" id="citybtn">Submit</button>
-                </div>
-                <br>
-                Temprature: <span id = 'temp' class="weather-pred"> Temprature of your city</span>
-                Humidity: <span id = 'humidity' class="weather-pred">Humidity of your city</span>
-                Wind Speed: <span id = 'wind' class="weather-pred">Wind speed in your city</span>
-                Sunset and Sunrise Time: <span id = 'sun' class="weather-pred">Sunset and rise time in your city</span>
-                <br>
-                
-            </div>
+    <div id="main-content">
+    <img src="/static/bgimg.jpg" id="bgimg">
+    <div class="navbar">
+        <h1>Fieldly</h1>
+        <img src="/static/imgs/burger.png" class="nav-burger" onclick="toggleburger()" />
+        <div class="headers">
+            <a href="/">Home</a>
+            <a onclick="showPopup()">Average Weather</a>
+            <a href="/predict">Crop Predict</a>
+            <a href="/predict_another">Fertilizer Predict</a>
+            <a href="https://github.com/kunalpaliwal13/Fieldly/tree/main">Get the Code</a>
+            <a onclick="toggleburger()">X</a>
         </div>
     </div>
-    
-    </div>
 
+
+    <div class="container">
+
+        <div id="home">
+            <h1 class="homeh1">F I E L D L Y</h1>
+            <h2>AI Crop and Fertilizer Recommendor</h2>
+            <p class="intro-text">"Your personalised agriculture assistance"</p>
+            <p class="intro-text" id="instruction">Use the burger menu to navigate</p>
+            <a href="/know-more">Know more</a>
+
+            <div class="gtranslate_wrapper"></div>
+
+
+
+
+
+
+            <div id="popup-container">
+                <div class="weather-pred-card">
+                    <span id="x" onclick="closePopup('popup-container')">X</span>
+                    <div class="content-weather">
+                        <div class="weather-header">
+                            <input type="text" class="input-city" id="search" placeholder="City Name">
+                            <button type="submit" class="btn" onclick="findCity()" id="citybtn">Submit</button>
+                        </div>
+                        <br>
+                        Temprature: <span id='temp' class="weather-pred"> Temprature of your city</span>
+                        Humidity: <span id='humidity' class="weather-pred">Humidity of your city</span>
+                        Wind Speed: <span id='wind' class="weather-pred">Wind speed in your city</span>
+                        Sunset and Sunrise Time: <span id='sun' class="weather-pred">Sunset and rise time in your
+                            city</span>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 </body>
 <script src="/static/script.js"></script>
-<script>window.gtranslateSettings = {"default_language":"en","languages":["en","hi"],"wrapper_selector":".gtranslate_wrapper"}</script>
+<script>window.gtranslateSettings = { "default_language": "en", "languages": ["en", "hi"], "wrapper_selector": ".gtranslate_wrapper" }</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 

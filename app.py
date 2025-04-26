@@ -69,6 +69,27 @@ def predict_another():
 def organic_methods():
     return render_template('organic_methods.html')
 
+
+@app.route('/predict2', methods=['POST'])
+def predict2():
+    try:
+        loaded_model = load_model('model.pkl')
+        scaler = pickle.load(open('scaler.pkl', 'rb'))
+
+        features = [float(request.form.get(f)) for f in ['N', 'P', 'K', 'temp', 'humidity']]
+        features = np.array(features).reshape(1, -1)
+        scaled_features = scaler.transform(features)
+
+        result = loaded_model.predict(scaled_features)
+        class_mapping = {'apple': 0, 'banana': 1, 'blackgram': 2, 'chickpea': 3, 'coconut': 4, 'coffee': 5, 'cotton': 6, 'grapes': 7, 'jute': 8, 'kidneybeans': 9, 'lentil': 10, 'maize': 11, 'mango': 12, 'mothbeans': 13, 'mungbean': 14, 'muskmelon': 15, 'orange': 16, 'papaya': 17, 'pigeonpeas': 18, 'pomegranate': 19, 'rice': 20, 'watermelon': 21}
+        predicted_crop = [crop for crop, label in class_mapping.items() if label == result[0]][0]
+
+        result = f'''{predicted_crop} is thepredicted crop'''
+    except Exception as e:
+        result = "no res pls"
+
+    return render_template("croppredict.html", result2=result)
+
 @app.route('/predict', methods=['GET','POST'])
 def predict():
     try:
@@ -110,4 +131,5 @@ def know_more():
     # plot_html = pio.to_html(fig, full_html=False)
     return render_template('know_more.html')
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=True)
+
