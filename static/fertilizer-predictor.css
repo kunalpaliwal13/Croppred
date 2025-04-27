@@ -1,0 +1,88 @@
+.btncontainer2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    }
+#x2{
+    display: none;
+}
+.shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 80%;
+    background-color: #239d60df;
+    border-radius:5px;
+    border:0;
+    color:white;
+    font-size:24px;
+    margin-bottom: 3%;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    font-weight:700;
+}.shop:hover{
+    background-color: #5dd99bdf;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    #x2{
+        display: flex;
+    }
+    .show{
+        display: none;
+    }
+    .hidden{
+        display: flex;
+    }
+    .predictor-mobile{
+        padding-top: 25%;
+        border-radius: 10px;
+        margin-left: 10%;
+        height: auto;
+        margin-right: 10%;
+    }
+    .bgbox-mobile{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.816);
+        height: 60vh;
+        border-radius: 10px;
+        padding: 5% 5%;
+        >.title-mobile{color: white;}
+        >form{
+            margin-top:7%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .inputform-mobile{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px ;
+        padding-left: 5px;
+        height: 7%;
+        }
+    .shop{
+        margin-bottom: 1%;
+        font-size: 18px;
+        width: 60%;
+        padding: 5px 0;
+    }
+    .result{
+        font-size: 15px;
+    }
+   #xxx{
+    display: none;
+   }
+    
+
+}

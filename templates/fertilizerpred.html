@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fertilizer Prediction</title>
     <link rel="stylesheet" href="static/crop-predict.css">
+    <link rel="stylesheet" href="static/fertilizer-predictor.css">
 </head>
-
 
 <body>
     <img src = "/static/bgimg.jpg" id="bgimg">
@@ -19,18 +19,17 @@
             <a href="/predict">Crop Predict</a>
             <a href="/predict_another">Fertilizer Predict</a>
             <a href="https://github.com/kunalpaliwal13/Fieldly/tree/main">Get the Code</a>
-            <a onclick="toggleburger()">X</a>
+            <a onclick="toggleburger()" id="x2">X</a>
         </div>
     </div>
-
 
     <div id="predictor" class="show">
         <div class="bgbox">
         <h1 class="title">Fertilizer Predictor🌱</h1>
         
-                <form action="/predict_another" method="post">
+            <form action="/predict_another" method="post">
                 <div class="labelbox">
-                    <select class="inputform" placeholder = "" name="soil_type" required style = "width: 27%;">
+                    <select class="inputform" placeholder = "" name="soil_type" >
                         <option value="" disabled selected>Soil Type</option>
                         <option value="0">Black</option>
                         <option value="1">Clay</option>
@@ -39,7 +38,7 @@
                         <option value="4">Sandy</option>
                     </select>
                     <br>
-                    <select class="inputform" name="crop_type" required style = "width: 27%;">
+                    <select class="inputform" name="crop_type" required >
                         <option value="" disabled selected>Crop Type</option>
                         <option value="0">Barley</option>
                         <option value="1">Cotton</option>
@@ -57,17 +56,17 @@
                 </div>
     
                 <div class="labelbox">
-                    <input class="inputform" type="number" name="nitrogen" required placeholder="Nitrogen (ratio)" style = "width: 27%;"><br>
-                    <input class="inputform" type="number" name="potassium" required placeholder="Potassium (ratio)" style = "width: 27%;"><br>
+                    <input class="inputform" type="number" name="nitrogen" required placeholder="Nitrogen (ratio)" ><br>
+                    <input class="inputform" type="number" name="potassium" required placeholder="Potassium (ratio)" ><br>
                 </div>
     
                 <div class="labelbox">
-                    <input class="inputform" type="number" name="phosphorous" required placeholder="Phosphorous (ratio)" style = "width: 27%;"><br>
+                    <input class="inputform" type="number" name="phosphorous" required placeholder="Phosphorous (ratio)" ><br>
                 </div>
 
                 <div class="btncontainer2">
-                <button class="btn" type="submit" >Predict</button>
-                <a id="shop" href="/organic_methods">Alternatives</a>
+                <button class="shop" type="submit" >Predict</button>
+                <a class="shop" href="/organic_methods">Alternatives</a>
             </div>
             
             <div class="result">{{ another_result }}</div>
@@ -77,12 +76,12 @@
     </div>
 
 
-    <div class="predictor2">
-        <div class="bgbox">
-            <h1 class="title">Fertilizer Predictor🌱</h1>
+    <div class="predictor-mobile hidden">
+        <div class="bgbox-mobile">
+            <h1 class="title-mobile">Fertilizer Predictor🌱</h1>
         
             <form action="/predict_another" method="post">
-                <select class="inputform" placeholder = "" name="soil_type" required>
+                <select class="inputform-mobile" placeholder = "" name="soil_type" required>
                     <option value="" disabled selected>Soil Type</option>
                     <option value="0">Black</option>
                     <option value="1">Clay</option>
@@ -91,7 +90,7 @@
                     <option value="4">Sandy</option>
                 </select>
                 <br>
-                <select class="inputform" name="crop_type" required>
+                <select class="inputform-mobile" name="crop_type" required>
                     <option value="" disabled selected>Crop Type</option>
                     <option value="0">Barley</option>
                     <option value="1">Cotton</option>
@@ -108,16 +107,16 @@
                 <br>
             
 
-                <input class="inputform" type="number" name="nitrogen" required placeholder="Nitrogen (ratio)" ><br>
-                <input class="inputform" type="number" name="potassium" required placeholder="Potassium (ratio)" ><br>
+                <input class="inputform-mobile" type="number" name="nitrogen" required placeholder="Nitrogen (ratio)" ><br>
+                <input class="inputform-mobile" type="number" name="potassium" required placeholder="Potassium (ratio)" ><br>
 
 
-                <input class="inputform" type="number" name="phosphorous" required placeholder="Phosphorous (ratio)" ><br>
+                <input class="inputform-mobile" type="number" name="phosphorous" required placeholder="Phosphorous (ratio)" ><br>
 
 
             <div class="btncontainer2">
-            <button class="btn" type="submit">Predict</button>
-            <a id="shop" href="/organic_methods">Alternatives</a>
+            <button class="shop" type="submit">Predict</button>
+            <a class="shop" href="/organic_methods" id="xxx">Alternatives</a>
         </div>
         
         <div class="result">{{ another_result }}</div>

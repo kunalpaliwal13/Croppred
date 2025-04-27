@@ -10,6 +10,9 @@ body {
     overflow: hidden;
     margin: 0; 
 }
+#x2{
+    display: none;
+}
 #bgimg {
     position: fixed;
     height: 100vh;
@@ -121,6 +124,9 @@ body {
         >h1{
             display: none;
         }
+      }
+      #x2{
+        display: flex;
       }
       .nav-burger{
         display: flex;

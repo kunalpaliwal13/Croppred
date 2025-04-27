@@ -15,14 +15,12 @@
 body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-    margin: 0;
+    
 }
 #bgimg{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    right: 0;
-    bottom: 0;
     z-index: -1000;
 }
 
@@ -31,16 +29,14 @@ body{
 }
 
 .navbar{
-    width: 98vw;
+    width: 100%;
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     color:#ffffff;
     font-weight: 500;
     position: fixed;
     z-index: 1000;
-    padding-right: 50px;
     font-size: 16px;
     background-color: transparent;
     height: 50px;
@@ -50,8 +46,6 @@ body{
     text-decoration: none;
     margin: 0 10px;
     color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
     transition: all 0.3s;
 }
 .navbar .headers a:hover{
@@ -59,13 +53,12 @@ body{
     
 }
 #predictor{
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding-bottom: 0;
+    padding-top: 7%;
+    padding-bottom: 5%;
 }
 
 
@@ -82,8 +75,6 @@ body{
     gap:10px;
     display: flex;
     justify-content: center;
-    font-weight: 600;
-    width: 100%;
     color: rgb(0, 0, 0);
     height: 10vh;
 }
@@ -98,34 +89,19 @@ body{
 }
 
 .btncontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 37%; 
-    /* padding-right: 300px; */
+    padding-left: 33%; 
     margin: 20px 0;
-    text-decoration: none;
-    gap: 20px;
     height: 50px;
     width: 160px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 20px;
     border: none;
     border-radius: 5px;
     text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-
 }
 .btn{
     width: 100%;
     background-color: #239d60df;
     border-radius:5px;
     border:0;
-    cursor:pointer;
     color:white;
     font-size:24px;
     padding-top:10px;
@@ -137,11 +113,13 @@ body{
 .btn:hover{
     background-color: #205239df;
 }
+#x2{
+    display: none;
+}
 .result{
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px black;
     border-radius: 5px;
-    margin-top: 0;
     width: 80%;
     margin-left: 8%;
     color: white;
@@ -159,7 +137,7 @@ body{
     border-radius: 10px ;
     width: 35%;
 }
-#shop{
+/* #shop{
     width: 100%;
     background-color: #239d60df;
     border-radius:5px;
@@ -174,32 +152,13 @@ body{
     font-weight:700;
     text-decoration: none;
 
-}
-#shop:hover{
+} */
+/* #shop:hover{
     background-color: #205239df;
-}
-.btncontainer2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20%;
-    margin: 20px 0;
-    text-decoration: none;
-    gap: 20px;
-    height: 50px;
-    width: 40%;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+} */
+/* 
 
-}
+} */
 .goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
     display: none;
 }
@@ -221,6 +180,9 @@ body{
     #bgimg{
         height:100%;
         width: 100%;
+    }
+    #x2{
+        display: flex;
     }
     .navbar{
         justify-content: flex-start;

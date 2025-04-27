@@ -16,6 +16,10 @@ body {
     margin: 0; 
     
 }
+
+#x2{
+    display: none;
+}
 #mobile-warning {
     display: none;
     height: 100vh;
@@ -209,6 +213,9 @@ body {
     font-size: 20px;
     text-shadow: 2px 2px green;
     
+  }
+  #x2{
+    display: flex;
   }
 
   #home h2{
